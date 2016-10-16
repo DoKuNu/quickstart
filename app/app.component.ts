@@ -27,6 +27,11 @@ export class AppComponent implements OnInit {
 
     private tasks: any;
 
+    //Fonction pour supprimer la tâche sélectionnée
+    removeTask(task: any) {
+        this.tasks.splice(this.tasks.indexOf(task), 1);
+    }
+
     ngOnInit() {
         this.tasks = TODOLIST;
     }

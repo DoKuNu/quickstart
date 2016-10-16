@@ -4,7 +4,7 @@
 <main>
     <section class="todolist">
         <ul *ngFor="let task of tasks">
-            <li>{{ task.text }}</li>
+            <li>{{ task.text }} <button (click)="removeTask(task)">Effectuée!</button></li>
         </ul>
     </section>
 </main>
