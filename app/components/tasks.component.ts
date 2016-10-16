@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ARCHIVES }from './archives.component';
 
 //Définition de la ToDoList
 
@@ -31,6 +32,7 @@ export class TasksComponent implements OnInit {
         this.resetInput();
     }
     removeTask(task: any) {
+        ARCHIVES.push(task);
         this.tasks.splice(this.tasks.indexOf(task), 1);
     }
     ngOnInit() {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-const TODOLIST: any[] = [
+export const ARCHIVES: any[] = [
     { text: 'Savoir faire du vélo'},
     { text: 'Rendre 10 centimes à José'},
 ];
@@ -11,11 +11,11 @@ const TODOLIST: any[] = [
 })
 
 export class ArchivesComponent implements OnInit {
-    private tasks: any;
+    private archives: any;
     removeTask(task: any) {
-        this.tasks.splice(this.tasks.indexOf(task), 1);
+        this.archives.splice(this.archives.indexOf(task), 1);
     }
     ngOnInit() {
-    this.tasks = TODOLIST;
+    this.archives = ARCHIVES;
     }
 }

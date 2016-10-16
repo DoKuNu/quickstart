@@ -1,5 +1,5 @@
 <section>
-    <ul *ngFor="let task of tasks">
+    <ul *ngFor="let task of archives">
         <list-task [task]="task" (sendRemoveTask)="removeTask($event)"></list-task>
     </ul>
 </section>
