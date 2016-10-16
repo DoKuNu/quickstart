@@ -1,6 +1,10 @@
 <header>
         <h1>La ToDoList vitale à ta vie</h1>
 </header>
+<nav>
+    <button>ToDoList</button>
+    <button>Archives</button>
+</nav>
 <section>
     <add-task [newTask]="newTask" (sendNewTask)="addNewTask($event)"></add-task>
 </section>
