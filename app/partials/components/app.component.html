@@ -2,16 +2,9 @@
         <h1>La ToDoList vitale à ta vie</h1>
 </header>
 <nav>
-    <button>ToDoList</button>
-    <button>Archives</button>
+    <button routerLink="/todolist">ToDoList</button>
+    <button routerLink="/archives">Archives</button>
 </nav>
-<section>
-    <add-task [newTask]="newTask" (sendNewTask)="addNewTask($event)"></add-task>
-</section>
 <main>
-    <section class="todolist">
-        <ul *ngFor="let task of tasks">
-            <li>{{ task.text }} <button (click)="removeTask(task)">Effectuée!</button></li>
-        </ul>
-    </section>
+    <router-outlet></router-outlet>
 </main>

@@ -1,0 +1,5 @@
+<section>
+    <ul *ngFor="let task of tasks">
+        <list-task [task]="task" (sendRemoveTask)="removeTask($event)"></list-task>
+    </ul>
+</section>

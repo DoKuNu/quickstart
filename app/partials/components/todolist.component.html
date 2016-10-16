@@ -1,0 +1,9 @@
+<section>
+    <add-task [newTask]="newTask" (sendNewTask)="addNewTask($event)"></add-task>
+</section>
+
+    <section class="todolist">
+        <ul *ngFor="let task of tasks">
+            <li>{{ task.text }} <button (click)="removeTask(task)">Effectuée!</button></li>
+        </ul>
+    </section>
