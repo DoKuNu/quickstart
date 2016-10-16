@@ -1,0 +1,10 @@
+<header>
+        <h1>La ToDoList vitale à ta vie</h1>
+</header>
+<main>
+    <section class="todolist">
+        <ul *ngFor="let task of tasks">
+            <li>{{ task.text }}</li>
+        </ul>
+    </section>
+</main>
