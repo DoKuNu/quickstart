@@ -26,6 +26,17 @@ const TODOLIST: any[] = [
 export class AppComponent implements OnInit {
 
     private tasks: any;
+    private newTask: any;
+
+    //On reset à chaque fois la nouvelle tâche
+    resetInput() {
+        this.newTask = { text: ''};
+    }
+    //Ajout de la tâche dans la todolist 
+    addNewTask() {
+        this.tasks.push(this.newTask);
+        this.resetInput();
+    }
 
     //Fonction pour supprimer la tâche sélectionnée
     removeTask(task: any) {
@@ -34,5 +45,6 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.tasks = TODOLIST;
+        this.resetInput();
     }
  }
